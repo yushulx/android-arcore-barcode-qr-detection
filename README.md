@@ -1,7 +1,6 @@
 # ARCore Barcode Detection
 
-An [ARCore](https://developers.google.com/ar) sample based on  [https://github.com/googlesamples/arcore-ml-sample.git](https://github.com/googlesamples/arcore-ml-sample.git), demonstrates how to utilize [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/sdk-mobile/) to detect 1D and 2D barcodes and
-create anchors for detected barcodes in the AR scene.
+An [ARCore](https://developers.google.com/ar) sample based on  [https://github.com/googlesamples/arcore-ml-sample.git](https://github.com/googlesamples/arcore-ml-sample.git), demonstrates how to utilize [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/sdk-mobile/) to detect multiple barcodes and create anchors for the detected barcodes in the AR scene.
 
 https://github.com/yushulx/android-arcore-barcode-qr-detection/assets/2202306/be665855-4720-4896-a838-f9105cd5f9c2
 
@@ -24,7 +23,9 @@ https://github.com/yushulx/android-arcore-barcode-qr-detection/assets/2202306/be
     }
     ```
 3. Build and run the sample.
- 
+
+    ![android-arcore-barcode-qr-detection](https://github.com/yushulx/android-arcore-barcode-qr-detection/assets/2202306/2b9114a2-24fe-4b7a-93e1-b145a060bb89)
+
 
 
 
