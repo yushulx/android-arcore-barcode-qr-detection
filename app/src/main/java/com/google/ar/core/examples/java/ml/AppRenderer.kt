@@ -15,6 +15,8 @@
  */
 package com.google.ar.core.examples.java.ml
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.opengl.Matrix
 import android.util.Log
 import android.widget.Toast
@@ -72,7 +74,7 @@ class AppRenderer(val activity: MainActivity) : DefaultLifecycleObserver, Sample
   var currentAnalyzer: ObjectDetector = gcpAnalyzer
 
   var reader: BarcodeReader? = null
-  val history = HashMap<String, String>()
+  val history = Collections.synchronizedMap(HashMap<String, String>())
 
   override fun onResume(owner: LifecycleOwner) {
     displayRotationHelper.onResume()
@@ -117,7 +119,10 @@ class AppRenderer(val activity: MainActivity) : DefaultLifecycleObserver, Sample
         }
 
       // Create and show the dialog
-      builder.create().show()
+      val alertDialog = builder.create()
+      val backgroundColor = Color.argb(150, 255, 255, 255)  // 178 is approximately 70% of 255
+      alertDialog.window?.setBackgroundDrawable(ColorDrawable(backgroundColor))
+      alertDialog.show()
     }
 
 //    view.useCloudMlSwitch.setOnCheckedChangeListener { _, isChecked ->
